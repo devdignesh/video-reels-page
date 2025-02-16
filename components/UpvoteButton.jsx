@@ -15,9 +15,9 @@ const UpvoteButton = ({ upvotes }) => {
     <div className="flex flex-col items-center gap-1">
       <button
         onClick={handleUpvote}
-        className="rounded-full flex flex-col items-center gap-1 p-2 cursor-pointer bg-transparent hover:bg-zinc-400/50 duration-300 transition-all"
+        className="rounded-full flex flex-col items-center gap-1 p-2 cursor-pointer bg-zinc-700/50 md:bg-transparent hover:bg-zinc-400/50 duration-300 transition-all"
       >
-        <GoArrowUp className="w-7 h-7 text-white  md:text-black" />
+        <GoArrowUp className="w-6 h-6 md:w-7 md:h-7 text-white  md:text-black" />
       </button>
       <motion.span
         key={upvoteCount}

@@ -21,9 +21,9 @@ const ShareButton = ({ url }) => {
     <div className="relative">
       <button
         onClick={handleShare}
-        className="rounded-full flex flex-col items-center gap-1 p-2 cursor-pointer bg-transparent hover:bg-zinc-400/50 duration-300 transition-all"
+        className="rounded-full flex flex-col items-center gap-1 p-2 cursor-pointer bg-zinc-700/50 md:bg-transparent hover:bg-zinc-400/50 duration-300 transition-all"
       >
-        <PiShareFatLight className="w-7 h-7 text-white md:text-black" />
+        <PiShareFatLight className="w-6 h-6 md:w-7 md:h-7 text-white md:text-black" />
       </button>
     </div>
   );

@@ -65,13 +65,13 @@ const VideoReel = ({ video }) => {
 
   return (
     <div className="relative md:max-w-[500px] m-auto  h-[100vh] max-h-[100vh] md:max-h-[91vh] flex items-center justify-center md:first:mt-5">
-      <div className="relative w-full h-full  md:rounded-md overflow-hidden  mt-5 mb-10 md:shadow-[0_0_15px_rgba(0,0,0,0.25)]  ">
-        <button
-          onClick={() => window.history.back()}
+      <div className="relative w-full h-full  md:rounded-md overflow-hidden  md:mt-5 md:mb-10 md:shadow-[0_0_15px_rgba(0,0,0,0.25)]  ">
+        <Link
+          href={"https://www.toastd.in/"}
           className="absolute left-4 top-5 z-20 md:hidden bg-black/40 rounded-full p-2 cursor-pointer hover:bg-black/70 transition-all"
         >
           <IoIosArrowBack className="w-5 h-5 text-white" />
-        </button>
+        </Link>
 
         <video
           ref={videoRef}
@@ -108,7 +108,7 @@ const VideoReel = ({ video }) => {
           )}
         </button>
 
-        <div className="absolute bottom-0 left-0 right-0 z-10 p-4 bg-gradient-to-t from-black/70 to-transparent">
+        <div className="absolute bottom-0 left-0 right-0 z-10 p-4 bg-gradient-to-t from-black/70  via-black/50 to-transparent">
           <div className="space-y-2 mb-3">
             <h3 className="text-white font-semibold text-2xl">
               {videoData.product.title}
@@ -130,7 +130,7 @@ const VideoReel = ({ video }) => {
             </div>
             <Link
               href={"https://www.toastd.in/"}
-              className=" w-full md:w-auto bg-white text-black font-medium px-6 py-2.5 rounded-full hover:bg-white/90 transition-all"
+              className=" w-full md:w-40 flex justify-center bg-white text-black font-medium px-6 py-2.5 rounded-full hover:bg-white/90 transition-all"
             >
               View Product
             </Link>
@@ -138,10 +138,10 @@ const VideoReel = ({ video }) => {
         </div>
       </div>
 
-      <div className="absolute right-4 md:right-[-60px] bottom-32 md:bottom-24 md:top-auto z-20 flex flex-col gap-2 md:gap-3">
+      <div className="absolute right-4 md:right-[-60px] bottom-36 md:bottom-28 md:top-auto z-20 flex flex-col gap-3">
         <LikeButton likes={videoData.likes} />
-        <ShareButton url={videoData.url} />
         <UpvoteButton upvotes={videoData.product.upvotes} />
+        <ShareButton url={videoData.url} />
       </div>
     </div>
   );

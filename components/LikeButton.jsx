@@ -15,7 +15,7 @@ const LikeButton = ({ likes }) => {
     <div className="flex flex-col items-center gap-1">
       <motion.button
         onClick={handleLike}
-        className="rounded-full flex flex-col items-center gap-1 p-2 cursor-pointer bg-transparent hover:bg-zinc-400/50 duration-300 transition-all"
+        className="rounded-full flex flex-col items-center gap-1 p-2 cursor-pointer bg-zinc-700/50 md:bg-transparent md:hover:bg-zinc-400/50  duration-300 transition-all"
       >
         <motion.div
           initial={{ scale: 1 }}
@@ -25,9 +25,9 @@ const LikeButton = ({ likes }) => {
           }}
         >
           {isLiked ? (
-            <IoHeartSharp className={`w-7 h-7 md:text-black fill-red-500`} />
+            <IoHeartSharp className={`w-6 h-6 md:w-7 md:h-7 md:text-black fill-red-500`} />
           ) : (
-            <IoHeartOutline className={`w-7 h-7 md:text-black text-white`} />
+            <IoHeartOutline className={`w-6 h-6 md:w-7 md:h-7 md:text-black text-white`} />
           )}
         </motion.div>
       </motion.button>
