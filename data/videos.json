@@ -2,10 +2,6 @@
     {
       "id": 1,
       "url": "/videos/video1.mp4",
-      "user": {
-        "name": "John Doe",
-        "profilePic": "/images/user1.jpg"
-      },
       "tags": ["travel", "nature"],
       "likes": 120,
       "shares": 30,
@@ -19,10 +15,6 @@
     {
       "id": 2,
       "url": "/videos/video1.mp4",
-      "user": {
-        "name": "John Doe",
-        "profilePic": "/images/user1.jpg"
-      },
       "tags": ["travel", "nature"],
       "likes": 120,
       "shares": 30,
@@ -36,10 +28,6 @@
     {
       "id": 3,
       "url": "/videos/video1.mp4",
-      "user": { 
-        "name": "John Doe",
-        "profilePic": "/images/user1.jpg"
-      },
       "tags": ["travel", "nature"],
       "likes": 120,
       "shares": 30,

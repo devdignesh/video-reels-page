@@ -16,6 +16,20 @@ const VideoReel = ({ video }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const { isGloballyMuted, toggleGlobalMute } = useVideo();
 
+  const fallbackVideo = {
+    url: "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    tags: ["sample", "video", "placeholder"],
+    likes: 0,
+    shares: 0,
+    product: {
+      title: "Sample Product",
+      description: "This is a placeholder product description. Real product information will be displayed here when available",
+      upvotes: 0
+    }
+  };
+
+  const videoData = video ?? fallbackVideo;
+
   useEffect(() => {
     const handleIntersection = (entries) => {
       entries.forEach((entry) => {
@@ -60,7 +74,7 @@ const VideoReel = ({ video }) => {
 
         <video
           ref={videoRef}
-          src={video.url}
+          src={videoData.url}
           className="w-full h-full object-cover"
           loop
           muted={isGloballyMuted}
@@ -96,13 +110,13 @@ const VideoReel = ({ video }) => {
         <div className="absolute bottom-0 left-0 right-0 z-10 p-4 bg-gradient-to-t from-black/70 to-transparent">
           <div className="space-y-2 mb-3">
             <h3 className="text-white font-semibold text-2xl">
-              {video.product.title}
+              {videoData.product.title}
             </h3>
 
-            <p className="text-white/90 text-sm">{video.product.description}</p>
+            <p className="text-white/90 text-sm">{videoData.product.description}</p>
 
             <div className="flex flex-wrap gap-2 pt-2 pb-4">
-              {video.tags?.map((tag, index) => (
+              {videoData.tags?.map((tag, index) => (
                 <span
                   key={index}
                   className="text-white bg-zinc-800/40 rounded-full px-3 py-1 text-sm   cursor-pointer"
@@ -122,11 +136,11 @@ const VideoReel = ({ video }) => {
       </div>
 
       <div className="absolute right-4 md:right-[-60px] bottom-32 md:bottom-24 md:top-auto z-20 flex flex-col gap-2 md:gap-3">
-        <LikeButton likes={video.likes} />
+        <LikeButton likes={videoData.likes} />
         <button className="rounded-full p-2 cursor-pointer justify-center items-center content-center text-center bg-transparent hover:bg-zinc-400/50">
           <PiShareFatLight className="w-7 h-7 text-white  md:text-black" />
         </button>
-        <UpvoteButton upvotes={video.product.upvotes} />
+        <UpvoteButton upvotes={videoData.product.upvotes} />
       </div>
     </div>
   );
