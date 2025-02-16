@@ -4,8 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { FaPlay } from "react-icons/fa";
-import { GoArrowUp, GoMute, GoUnmute } from "react-icons/go";
-import { PiShareFatLight } from "react-icons/pi";
+import { GoMute, GoUnmute } from "react-icons/go";
 import { IoIosArrowBack } from "react-icons/io";
 import Link from "next/link";
 import LikeButton from "./LikeButton";
@@ -15,6 +14,7 @@ import ShareButton from "./ShareButton";
 const VideoReel = ({ video }) => {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [videoError, setVideoError] = useState(false);
   const { isGloballyMuted, toggleGlobalMute } = useVideo();
 
   const fallbackVideo = {
@@ -30,7 +30,12 @@ const VideoReel = ({ video }) => {
     },
   };
 
-  const videoData = video ?? fallbackVideo;
+  const handleVideoError = () => {
+    setVideoError(true);
+    console.log(`Failed to load video: ${video.url}`);
+  };
+
+  const videoData = videoError ? fallbackVideo : video;
 
   useEffect(() => {
     const handleIntersection = (entries) => {
@@ -76,6 +81,7 @@ const VideoReel = ({ video }) => {
         <video
           ref={videoRef}
           src={videoData.url}
+          onError={handleVideoError}
           className="w-full h-full object-cover"
           loop
           muted={isGloballyMuted}

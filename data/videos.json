@@ -1,39 +1,86 @@
 [
-    {
-      "id": 1,
-      "url": "/videos/video1.mp4",
-      "tags": ["travel", "nature"],
-      "likes": 120,
-      "bookmarked": false,
-      "product": {
-        "title": "Travel Backpack",
-        "description": "Best backpack for long trips",
-        "upvotes": 150
-      }
-    },
-    {
-      "id": 2,
-      "url": "/videos/video1.mp4",
-      "tags": ["travel", "nature"],
-      "likes": 120,
-      "bookmarked": false,
-      "product": {
-        "title": "Travel Backpack",
-        "description": "Best backpack for long trips",
-        "upvotes": 150
-      }
-    },
-    {
-      "id": 3,
-      "url": "/videos/video1.mp4",
-      "tags": ["travel", "nature"],
-      "likes": 120,
-      "bookmarked": false,
-      "product": {
-        "title": "Travel Backpack",
-        "description": "Best backpack for long trips",
-        "upvotes": 150
-      }
+  {
+    "id": 1,
+    "url": "/videos/video1.mp4",
+    "tags": ["perfume", "luxury", "chanel"],
+    "likes": 845,
+    "bookmarked": false,
+    "product": {
+      "title": "Chanel Sauvage",
+      "description": "Iconic fragrance",
+      "upvotes": 320
     }
-  ]
-  
+  },
+  {
+    "id": 2,
+    "url": "/videos/video2.mp4",
+    "tags": ["perfume", "designer", "dior"],
+    "likes": 763,
+    "bookmarked": false,
+    "product": {
+      "title": "Dior Sauvage",
+      "description": "Fresh and bold fragrance",
+      "upvotes": 290
+    }
+  },
+  {
+    "id": 3,
+    "url": "/videos/video3.mp4",
+    "tags": ["perfume", "luxury", "tomford"],
+    "likes": 692,
+    "bookmarked": false,
+    "product": {
+      "title": "Tom Ford Black Orchid",
+      "description": "Luxurious and sensual fragrance",
+      "upvotes": 275
+    }
+  },
+  {
+    "id": 4,
+    "url": "/videos/video4.mp4",
+    "tags": ["perfume", "designer", "gucci"],
+    "likes": 534,
+    "bookmarked": false,
+    "product": {
+      "title": "Gucci Bloom",
+      "description": "Rich floral feminine fragrance",
+      "upvotes": 180
+    }
+  },
+  {
+    "id": 5,
+    "url": "/videos/video5.mp4",
+    "tags": ["perfume", "luxury", "creed"],
+    "likes": 921,
+    "bookmarked": false,
+    "product": {
+      "title": "Creed Aventus",
+      "description": "Prestigious fruity masculine scent",
+      "upvotes": 450
+    }
+  },
+  {
+    "id": 6,
+    "url": "/videos/video6.mp4",
+    "tags": ["perfume", "designer", "versace"],
+    "likes": 623,
+    "bookmarked": false,
+    "product": {
+      "title": "Versace Eros",
+      "description": "Bold and seductive fragrance",
+      "upvotes": 210
+    }
+  },  
+  {
+    "id": 7,
+    "url": "/videos/video7.mp4",
+    "tags": ["perfume", "luxury", "ysl"],
+    "likes": 788,
+    "bookmarked": false,
+    "product": {
+      "title": "YSL Black Opium",
+      "description": "Modern and addictive coffee-infused scent",
+      "upvotes": 340
+    }
+  }
+]
