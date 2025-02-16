@@ -9,6 +9,7 @@ import { PiShareFatLight } from "react-icons/pi";
 import { IoIosArrowBack } from "react-icons/io";
 import Link from "next/link";
 import LikeButton from "./LikeButton";
+import UpvoteButton from "./UpvoteButton";
 
 const VideoReel = ({ video }) => {
   const videoRef = useRef(null);
@@ -46,7 +47,7 @@ const VideoReel = ({ video }) => {
     }
   };
 
-
+  
   return (
     <div className="relative md:max-w-[500px] m-auto  h-[100vh] max-h-[100vh] md:max-h-[91vh] flex items-center justify-center md:first:mt-5">
       <div className="relative w-full h-full  md:rounded-md overflow-hidden  mt-5 mb-10 md:shadow-[0_0_15px_rgba(0,0,0,0.25)]  ">
@@ -125,10 +126,7 @@ const VideoReel = ({ video }) => {
         <button className="rounded-full p-2 cursor-pointer justify-center items-center content-center text-center bg-transparent hover:bg-zinc-400/50">
           <PiShareFatLight className="w-7 h-7 text-white  md:text-black" />
         </button>
-
-        <button className="rounded-full p-2 cursor-pointer justify-center items-center content-center text-center bg-transparent hover:bg-zinc-400/50">
-          <GoArrowUp className="w-7 h-7 text-white  md:text-black" />
-        </button>
+        <UpvoteButton upvotes={video.product.upvotes} />
       </div>
     </div>
   );
