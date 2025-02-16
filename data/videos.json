@@ -4,7 +4,6 @@
       "url": "/videos/video1.mp4",
       "tags": ["travel", "nature"],
       "likes": 120,
-      "shares": 30,
       "bookmarked": false,
       "product": {
         "title": "Travel Backpack",
@@ -17,7 +16,6 @@
       "url": "/videos/video1.mp4",
       "tags": ["travel", "nature"],
       "likes": 120,
-      "shares": 30,
       "bookmarked": false,
       "product": {
         "title": "Travel Backpack",
@@ -30,7 +28,6 @@
       "url": "/videos/video1.mp4",
       "tags": ["travel", "nature"],
       "likes": 120,
-      "shares": 30,
       "bookmarked": false,
       "product": {
         "title": "Travel Backpack",

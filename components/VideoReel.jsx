@@ -10,6 +10,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import Link from "next/link";
 import LikeButton from "./LikeButton";
 import UpvoteButton from "./UpvoteButton";
+import ShareButton from "./ShareButton";
 
 const VideoReel = ({ video }) => {
   const videoRef = useRef(null);
@@ -20,12 +21,13 @@ const VideoReel = ({ video }) => {
     url: "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
     tags: ["sample", "video", "placeholder"],
     likes: 0,
-    shares: 0,
+    bookmarked: false,
     product: {
       title: "Sample Product",
-      description: "This is a placeholder product description. Real product information will be displayed here when available",
-      upvotes: 0
-    }
+      description:
+        "This is a placeholder product description. Real product information will be displayed here when available",
+      upvotes: 0,
+    },
   };
 
   const videoData = video ?? fallbackVideo;
@@ -61,7 +63,6 @@ const VideoReel = ({ video }) => {
     }
   };
 
-  
   return (
     <div className="relative md:max-w-[500px] m-auto  h-[100vh] max-h-[100vh] md:max-h-[91vh] flex items-center justify-center md:first:mt-5">
       <div className="relative w-full h-full  md:rounded-md overflow-hidden  mt-5 mb-10 md:shadow-[0_0_15px_rgba(0,0,0,0.25)]  ">
@@ -113,7 +114,9 @@ const VideoReel = ({ video }) => {
               {videoData.product.title}
             </h3>
 
-            <p className="text-white/90 text-sm">{videoData.product.description}</p>
+            <p className="text-white/90 text-sm">
+              {videoData.product.description}
+            </p>
 
             <div className="flex flex-wrap gap-2 pt-2 pb-4">
               {videoData.tags?.map((tag, index) => (
@@ -137,9 +140,7 @@ const VideoReel = ({ video }) => {
 
       <div className="absolute right-4 md:right-[-60px] bottom-32 md:bottom-24 md:top-auto z-20 flex flex-col gap-2 md:gap-3">
         <LikeButton likes={videoData.likes} />
-        <button className="rounded-full p-2 cursor-pointer justify-center items-center content-center text-center bg-transparent hover:bg-zinc-400/50">
-          <PiShareFatLight className="w-7 h-7 text-white  md:text-black" />
-        </button>
+        <ShareButton url={videoData.url} />
         <UpvoteButton upvotes={videoData.product.upvotes} />
       </div>
     </div>
