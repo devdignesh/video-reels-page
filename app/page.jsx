@@ -1,9 +1,25 @@
-import Image from "next/image";
+"use client";
+import { useState, useEffect } from "react";
+import VideoReel from "@/components/VideoReel";
 
-export default function Home() {
+const Home = () => {
+  const [videos, setVideos] = useState([]);
+
+  useEffect(() => {
+    fetch("/api/videos")
+      .then((res) => res.json())
+      .then((data) => setVideos(data));
+  }, []);
+
   return (
-    <>
-      <span className="text-2xl">Hello</span>
-    </>
+    <div className="h-screen overflow-y-scroll snap-y snap-mandatory scrollbar-hide">
+      {videos.map((video) => (
+        <div key={video.id} className="snap-center">
+          <VideoReel video={video} />
+        </div>
+      ))}
+    </div>
   );
-}
+};
+
+export default Home;

@@ -1,0 +1,54 @@
+[
+    {
+      "id": 1,
+      "url": "/videos/video1.mp4",
+      "user": {
+        "name": "John Doe",
+        "profilePic": "/images/user1.jpg"
+      },
+      "tags": ["travel", "nature"],
+      "likes": 120,
+      "shares": 30,
+      "bookmarked": false,
+      "product": {
+        "title": "Travel Backpack",
+        "description": "Best backpack for long trips",
+        "upvotes": 150
+      }
+    },
+    {
+      "id": 2,
+      "url": "/videos/video1.mp4",
+      "user": {
+        "name": "John Doe",
+        "profilePic": "/images/user1.jpg"
+      },
+      "tags": ["travel", "nature"],
+      "likes": 120,
+      "shares": 30,
+      "bookmarked": false,
+      "product": {
+        "title": "Travel Backpack",
+        "description": "Best backpack for long trips",
+        "upvotes": 150
+      }
+    },
+    {
+      "id": 3,
+      "url": "/videos/video1.mp4",
+      "user": { 
+        "name": "John Doe",
+        "profilePic": "/images/user1.jpg"
+      },
+      "tags": ["travel", "nature"],
+      "likes": 120,
+      "shares": 30,
+      "bookmarked": false,
+      "product": {
+        "title": "Travel Backpack",
+        "description": "Best backpack for long trips",
+        "upvotes": 150
+      }
+    }
+  ]
+  
